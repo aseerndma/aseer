@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aseer Ul Haq — GIS Developer</title>
+  <meta name="description" content="Aseer Ul Haq — GIS Developer at NDMA and Space Science graduate from Islamabad, Pakistan. Full-stack geospatial development, spatial databases and disaster-risk mapping.">
+  <meta name="theme-color" content="#050505">
+  <link rel="icon" type="image/png" href="profile.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- ===== Atmosphere layers ===== -->
+  <div class="bg-art" id="bg-art" aria-hidden="true"></div>
+  <div class="fog" aria-hidden="true"></div>
+  <canvas id="ash" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ===== SVG sprite ===== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="orn" viewBox="0 0 240 24">
+      <path d="M2 12H106M134 12H238" fill="none" stroke="currentColor" stroke-width=".8"/>
+      <path d="M26 12l5-5M44 12l5 5M62 12l5-5M80 12l5 5M214 12l-5-5M196 12l-5 5M178 12l-5-5M160 12l-5 5" fill="none" stroke="currentColor" stroke-width=".8"/>
+      <path d="M120 2l10 10-10 10-10-10z" fill="none" stroke="currentColor" stroke-width=".9"/>
+      <path d="M120 7.5l4.5 4.5-4.5 4.5-4.5-4.5z" fill="currentColor"/>
+      <circle cx="106" cy="12" r="1.4" fill="currentColor"/>
+      <circle cx="134" cy="12" r="1.4" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 5.5h18v13H3z"/><path d="M3 6.5l9 6.5 9-6.5"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3.5h3.5l2 5-2.5 1.6a11 11 0 0 0 5.9 5.9l1.6-2.5 5 2V19a2 2 0 0 1-2 2A17 17 0 0 1 3 5.5a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 3.5v12M6.5 10.5l5.5 5.5 5.5-5.5M4.5 20.5h15"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="12" height="12"/><path d="M15.5 8.5v-5h-12v12h5"/></symbol>
+  </svg>
+
+  <!-- ===== Navigation ===== -->
+  <header class="nav" id="nav">
+    <a class="brand" href="#top" aria-label="Aseer Ul Haq — back to top">Aseer Ul Haq</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Menu</span>
+    </button>
+    <nav class="nav-links" id="nav-links" aria-label="Primary">
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#works">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#publications">Publications</a>
+      <a href="#events">Events</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-cv" href="Aseer%20Ul%20Haq%20CV.pdf" download>CV</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="top">
+      <div class="hero-inner">
+        <figure class="portrait reveal">
+          <img src="profile.png" alt="Portrait of Aseer Ul Haq" width="250" height="250">
+        </figure>
+        <p class="hero-pre reveal" style="--d:.1s">GIS Developer <span>·</span> Space Scientist</p>
+        <h1 class="hero-name reveal" style="--d:.2s">Aseer Ul Haq</h1>
+        <svg class="orn reveal" style="--d:.3s" aria-hidden="true"><use href="#orn"/></svg>
+        <p class="hero-role reveal" style="--d:.4s">
+          Assistant Manager, GIS Developer at the
+          <span>National Disaster Management Authority</span>, Islamabad
+        </p>
+        <p class="hero-lede reveal" style="--d:.5s">
+          Interactive maps, spatial databases and geospatial pipelines that turn raw spatial data
+          into real-time insight for disaster management.
+        </p>
+        <div class="hero-cta reveal" style="--d:.6s">
+          <a class="btn btn-solid" href="Aseer%20Ul%20Haq%20CV.pdf" download>
+            <svg class="ico" aria-hidden="true"><use href="#i-down"/></svg> Download CV
+          </a>
+          <a class="btn" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#experience" aria-label="Scroll to experience"><span></span></a>
+    </section>
+
+    <!-- ===== I. Experience ===== -->
+    <section class="section" id="experience">
+      <header class="sec-head reveal">
+        <span class="sec-num">I</span>
+        <h2>Experience</h2>
+        <p class="sec-kicker">Chronicles of the craft</p>
+        <svg class="orn" aria-hidden="true"><use href="#orn"/></svg>
+      </header>
+
+      <ol class="timeline">
+        <li class="tl-item reveal">
+          <div class="tl-meta">
+            <time datetime="2025-08-22">Aug 2025 — Present</time>
+            <span>Islamabad, Pakistan</span>
+          </div>
+          <h3>Assistant Manager — GIS Developer</h3>
+          <p class="tl-org">National Disaster Management Authority (NDMA)</p>
+          <ul class="tl-points">
+            <li><strong>Full-stack geospatial development.</strong> Design and code high-performance, interactive mapping interfaces and custom spatial dashboards with Mapbox GL JS and Leaflet.</li>
+            <li><strong>Spatial database architecture.</strong> Engineer and maintain robust spatial relational databases in PostgreSQL and PostGIS, optimised for high-volume spatial querying and data integrity.</li>
+            <li><strong>Geospatial server administration.</strong> Configure and scale GeoServer environments for the secure, efficient rendering, hosting and dissemination of extensive spatial datasets via standard web services.</li>
+            <li><strong>Data pipelines &amp; full-stack integration.</strong> Build automated pipelines that process complex geospatial data, connecting backend spatial infrastructure to dynamic frontends for real-time visualisation and analysis.</li>
+          </ul>
+          <ul class="tags">
+            <li>Mapbox GL JS</li><li>Leaflet</li><li>PostgreSQL</li><li>PostGIS</li><li>GeoServer</li>
+          </ul>
+        </li>
+
+        <li class="tl-item reveal">
+          <div class="tl-meta">
+            <time datetime="2022-07-18">Jul 2022 — Sep 2022</time>
+            <span>Saskatoon, Canada</span>
+          </div>
+          <h3>GIS Intern</h3>
+          <p class="tl-org">CHASR, University of Saskatchewan</p>
+          <p>GIS analysis and mapping, building web applications with ArcGIS Web AppBuilder, creating dashboards from independent, self-managed data, and studying the Sustainable Development Goals.</p>
+          <ul class="tags">
+            <li>ArcGIS</li><li>Web AppBuilder</li><li>Dashboards</li><li>SDGs</li>
+          </ul>
+          <a class="link" href="https://chasr.usask.ca" target="_blank" rel="noopener">chasr.usask.ca ↗</a>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===== II. Education ===== -->
+    <section class="section" id="education">
+      <header class="sec-head reveal">
+        <span class="sec-num">II</span>
+        <h2>Education</h2>
+        <p class="sec-kicker">Halls of learning</p>
+        <svg class="orn" aria-hidden="true"><use href="#orn"/></svg>
+      </header>
+
+      <div class="edu-grid">
+        <article class="panel edu-card edu-main reveal">
+          <time datetime="2019-09-16">2019 — 2023</time>
+          <h3>BS Space Science</h3>
+          <p>Institute of Space Technology, Islamabad</p>
+          <a class="link" href="http://ist.edu.pk/" target="_blank" rel="noopener">ist.edu.pk ↗</a>
+        </article>
+        <article class="panel edu-card reveal" style="--d:.1s">
+          <time datetime="2016-07-12">2016 — 2018</time>
+          <h3>Intermediate School Certificate</h3>
+          <p>Fauji Foundation College for Boys, New Lalazar, Islamabad</p>
+        </article>
+        <article class="panel edu-card reveal" style="--d:.2s">
+          <time datetime="2014-05-01">2014 — 2016</time>
+          <h3>Secondary School Certificate</h3>
+          <p>Fauji Foundation College for Boys, New Lalazar, Islamabad</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== III. Projects ===== -->
+    <section class="section" id="works">
+      <header class="sec-head reveal">
+        <span class="sec-num">III</span>
+        <h2>Projects</h2>
+        <p class="sec-kicker">Maps forged in research</p>
+        <svg class="orn" aria-hidden="true"><use href="#orn"/></svg>
+      </header>
+
+      <div class="works">
+        <article class="panel work reveal">
+          <div class="work-top"><span class="work-no">01</span><span class="badge">Published</span></div>
+          <h3>Solar Photovoltaic Potential at Building-Footprint Level</h3>
+          <p>Geospatial mapping of rooftop solar potential across the tourism-rich northern districts of Khyber Pakhtunkhwa — solar radiation modelled in ArcGIS Pro, results served through an ArcGIS Online dashboard and ArcMap maps.</p>
+          <ul class="tags"><li>ArcGIS Pro</li><li>Solar Radiation</li><li>ArcGIS Online</li><li>ArcMap</li></ul>
+          <p class="work-org">Institute of Space Technology · CHASR, University of Saskatchewan</p>
+        </article>
+
+        <article class="panel work reveal" style="--d:.08s">
+          <div class="work-top"><span class="work-no">02</span><span class="badge">Presented</span></div>
+          <h3>Public Transit Routes using Geospatial Technologies</h3>
+          <p>A case study of the Twin Cities — digitisation and analysis in ArcGIS Pro, an ArcGIS Online dashboard, ArcMap cartography and GPS-based route tracking.</p>
+          <ul class="tags"><li>ArcGIS Pro</li><li>ArcGIS Online</li><li>ArcMap</li><li>GPS</li></ul>
+          <p class="work-org">Institute of Space Technology · CHASR, University of Saskatchewan</p>
+        </article>
+
+        <article class="panel work reveal" style="--d:.16s">
+          <div class="work-top"><span class="work-no">03</span></div>
+          <h3>Time-Series Literacy Web Map of Punjab</h3>
+          <p>A Leaflet web map backed by GeoServer, mapping the time-series literacy rate of every district in Punjab.</p>
+          <ul class="tags"><li>Leaflet</li><li>GeoServer</li><li>Web Mapping</li></ul>
+          <p class="work-org">Institute of Space Technology</p>
+        </article>
+
+        <article class="panel work reveal">
+          <div class="work-top"><span class="work-no">04</span></div>
+          <h3>Burn Severity Mapping — Margalla Hills, 2021</h3>
+          <p>Burn severity mapping over Margalla Hills National Park for the 2021 fires, using Google Earth Engine.</p>
+          <ul class="tags"><li>Google Earth Engine</li><li>Remote Sensing</li></ul>
+          <p class="work-org">Institute of Space Technology</p>
+        </article>
+
+        <article class="panel work reveal" style="--d:.08s">
+          <div class="work-top"><span class="work-no">05</span></div>
+          <h3>Urban Heat Mapping — Karachi, 2015</h3>
+          <p>Mapping urban heat across Karachi for 2015 using Google Earth Engine.</p>
+          <ul class="tags"><li>Google Earth Engine</li><li>Urban Heat</li></ul>
+          <p class="work-org">Institute of Space Technology</p>
+        </article>
+
+        <article class="panel work reveal" style="--d:.16s">
+          <div class="work-top"><span class="work-no">06</span></div>
+          <h3>Census Data Dashboard — Punjab</h3>
+          <p>An interactive dashboard showing the distribution of census data across Punjab, built with ArcGIS.</p>
+          <ul class="tags"><li>ArcGIS</li><li>Dashboards</li></ul>
+          <p class="work-org">Institute of Space Technology</p>
+        </article>
+
+        <article class="panel work reveal">
+          <div class="work-top"><span class="work-no">07</span></div>
+          <h3>Snow Avalanche Hazard Assessment</h3>
+          <p>Hazard assessment of snow avalanches and their relationship with extreme meteorological events.</p>
+          <ul class="tags"><li>Hazard Mapping</li><li>Climate Extremes</li></ul>
+          <p class="work-org">Institute of Space Technology</p>
+        </article>
+
+        <article class="panel work reveal" style="--d:.08s">
+          <div class="work-top"><span class="work-no">08</span></div>
+          <h3>The 2005 Pakistan Earthquake</h3>
+          <p>Analysing the magnitude and high-impact areas of the 2005 earthquake in Pakistan using ArcMap.</p>
+          <ul class="tags"><li>ArcMap</li><li>Disaster Analysis</li></ul>
+          <p class="work-org">Institute of Space Technology</p>
+        </article>
+
+        <article class="panel work reveal" style="--d:.16s">
+          <div class="work-top"><span class="work-no">09</span></div>
+          <h3>Vegetation &amp; Land Surface Temperature — D.I. Khan</h3>
+          <p>Temporal analysis of vegetation and land surface temperature in Dera Ismail Khan using Landsat 8 data.</p>
+          <ul class="tags"><li>Landsat 8</li><li>LST</li><li>Remote Sensing</li></ul>
+          <p class="work-org">Institute of Space Technology</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== IV. Skills ===== -->
+    <section class="section" id="skills">
+      <header class="sec-head reveal">
+        <span class="sec-num">IV</span>
+        <h2>Skills</h2>
+        <p class="sec-kicker">The arsenal</p>
+        <svg class="orn" aria-hidden="true"><use href="#orn"/></svg>
+      </header>
+
+      <div class="skills-grid">
+        <div class="panel skill-group reveal">
+          <h3>Technical</h3>
+          <ul class="tags skill-tags">
+            <li>Python</li><li>SQL</li><li>HTML</li><li>CSS</li><li>Java</li><li>Node.js</li>
+            <li>SvelteKit</li><li>deck.gl</li><li>MapLibre</li><li>PMTiles</li><li>REST API</li>
+            <li>Cloudflare</li><li>GitHub</li><li>CI/CD Pipelines</li><li>Python GIS Automation</li>
+            <li>Machine Learning</li><li>AI Automation</li><li>R &amp; RStudio</li><li>MATLAB</li>
+          </ul>
+        </div>
+        <div class="panel skill-group reveal" style="--d:.1s">
+          <h3>Geospatial Frameworks</h3>
+          <ul class="tags skill-tags">
+            <li>Leaflet</li><li>Mapbox GL</li><li>OpenLayers</li><li>OpenStreetMap</li>
+            <li>Google Maps</li><li>PostgreSQL</li><li>PostGIS</li><li>GeoPandas</li>
+          </ul>
+        </div>
+        <div class="panel skill-group reveal" style="--d:.2s">
+          <h3>Software &amp; Infrastructure</h3>
+          <ul class="tags skill-tags">
+            <li>ArcGIS Pro</li><li>QGIS</li><li>ArcGIS Server</li><li>GeoServer</li>
+            <li>Google Earth Engine</li><li>Google Earth Pro</li><li>RAMMS</li>
+            <li>ERDAS IMAGINE</li><li>ENVI</li><li>SNAP</li><li>Proteus</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== V. Publications ===== -->
+    <section class="section" id="publications">
+      <header class="sec-head reveal">
+        <span class="sec-num">V</span>
+        <h2>Publications</h2>
+        <p class="sec-kicker">Words set in stone</p>
+        <svg class="orn" aria-hidden="true"><use href="#orn"/></svg>
+      </header>
+
+      <article class="panel pub-feature reveal">
+        <p class="pub-meta"><span class="badge">Published</span> MDPI Geomatics · 2026</p>
+        <h3>Unlocking Solar Potential: Geospatial Mapping of Building-Level Photovoltaic Opportunities in Northern Khyber Pakhtunkhwa’s Tourism Districts, Pakistan</h3>
+        <p class="pub-authors">Abdul Sattar Sheikh, Rizwan Shahid, Abdullah Shah, <strong>Aseer Ul Haq</strong> and Tayyab Shah</p>
+
+        <dl class="stats">
+          <div><dt>1.29M</dt><dd>buildings analysed</dd></div>
+          <div><dt>~35%</dt><dd>suitable for solar panels</dd></div>
+          <div><dt>SDG 7</dt><dd>affordable &amp; clean energy</dd></div>
+        </dl>
+
+        <details class="abstract">
+          <summary>Read abstract</summary>
+          <p>This study evaluates the rooftop solar photovoltaic (PV) potential at the building level in the tourism-rich districts of Northern Khyber Pakhtunkhwa (KPK), Pakistan, using advanced geospatial analysis to support renewable energy planning. By combining the Area Solar Radiation tool with detailed building footprint data, the study identified solar energy potential and prioritized areas for PV system installations. Results show that approximately 35% of the 1.29 million buildings analyzed are suitable for solar panels, with energy generation capacity varying by building size and district. Spatial analysis further highlighted Union Councils (UCs) where over 50% of buildings are solar-suitable, enabling precise targeting of renewable energy initiatives. The study underscores the importance of integrating local geographical and socio-economic data to enhance the feasibility and scalability of solar energy solutions in rural and urban settings and can be used to guide policy prioritization and funding decisions. This research demonstrates how geospatial analysis and open data can drive localized clean energy adoption, directly contributing to Sustainable Development Goal 7 by advancing affordable and sustainable energy solutions.</p>
+        </details>
+      </article>
+
+      <ul class="pub-list">
+        <li class="panel reveal">
+          <span class="badge badge-dim">In progress</span>
+          <h3>Assessing Public Transit Route Accessibility: Identifying Areas with Limited Access in the Twin Cities</h3>
+          <p>Haq, A.U. &amp; Shah, T. — <em>Journal of Traffic and Transportation Engineering</em> · 2024</p>
+        </li>
+        <li class="panel reveal" style="--d:.1s">
+          <span class="badge badge-dim">In progress</span>
+          <h3>Spatial Database Framework for Delineating Public Transit Routes: A Multi-Source Data Approach for the Twin Cities</h3>
+          <p>Haq, A.U. &amp; Shah, T. — <em>Journal of Traffic and Transportation Engineering</em></p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===== VI. Conferences & Training ===== -->
+    <section class="section" id="events">
+      <header class="sec-head reveal">
+        <span class="sec-num">VI</span>
+        <h2>Conferences &amp; Training</h2>
+        <p class="sec-kicker">Gatherings</p>
+        <svg class="orn" aria-hidden="true"><use href="#orn"/></svg>
+      </header>
+
+      <div class="events-grid">
+        <div class="events-col reveal">
+          <h3 class="col-title">Conferences &amp; Seminars</h3>
+          <ul class="events">
+            <li>
+              <p class="ev-when">Punjab University, Lahore</p>
+              <h4>Presentation — Development of Public Transit Routes using Geospatial Technologies</h4>
+              <p>An in-depth analysis of the current public transit route system in the Twin Cities, presented through a dashboard.</p>
+            </li>
+            <li>
+              <p class="ev-when"><time datetime="2022-03-28">28 — 30 Mar 2022</time> · Punjab University, Lahore</p>
+              <h4>Poster — Development of Public Transit Routes using Geospatial Technologies</h4>
+              <p>The role of GIS in developing transit routes, and the model required to integrate changes into the current routing system.</p>
+            </li>
+            <li>
+              <p class="ev-when">Punjab University, Lahore</p>
+              <h4>Presentation — Solar Photovoltaic Potential at Building-Footprint Level, Northern KPK</h4>
+              <p>Showcasing the solar PV potential of Pakistan’s tourism-rich districts through dashboards and posters.</p>
+              <a class="link" href="https://www.anticipation-hub.org/news/pakistan-holds-its-first-national-dialogue-platform-on-anticipatory-%20action" target="_blank" rel="noopener">anticipation-hub.org ↗</a>
+            </li>
+            <li>
+              <p class="ev-when"><time datetime="2024-10-23">23 Oct 2024</time> · World Food Programme, Islamabad</p>
+              <h4>Workshop for Integrated Context Analysis in Pakistan</h4>
+            </li>
+          </ul>
+        </div>
+
+        <div class="events-col reveal" style="--d:.1s">
+          <h3 class="col-title">Workshops &amp; Courses</h3>
+          <ul class="events">
+            <li>
+              <p class="ev-when"><time datetime="2026-05-20">20 — 21 May 2026</time> · UNESCO, Islamabad</p>
+              <h4>Disaster Risk Reduction Knowledge Service and Digital CPEC</h4>
+              <p>Training workshop.</p>
+            </li>
+            <li>
+              <p class="ev-when"><time datetime="2025-12-19">19 Dec 2025</time> · WWF, Islamabad</p>
+              <h4>Ecosystem-based Adaptation &amp; Green Infrastructure</h4>
+              <p>Implementation, monitoring, operations and maintenance for Ecosystem-based Adaptation and Green Infrastructure interventions under WWF-Pakistan’s Recharge Pakistan Project.</p>
+            </li>
+            <li>
+              <p class="ev-when">Esri Training</p>
+              <h4>Using Arcade Expressions in ArcGIS Dashboards</h4>
+              <a class="link" href="https://www.esri.com/training/" target="_blank" rel="noopener">esri.com/training ↗</a>
+            </li>
+            <li>
+              <p class="ev-when">Esri Training</p>
+              <h4>Introduction to ArcGIS Arcade</h4>
+              <a class="link" href="https://www.esri.com/training/" target="_blank" rel="noopener">esri.com/training ↗</a>
+            </li>
+            <li>
+              <p class="ev-when">MATLAB · Institute of Space Technology</p>
+              <h4>Image Processing Onramp</h4>
+              <p>Online course.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== VII. Languages & References ===== -->
+    <section class="section" id="languages">
+      <header class="sec-head reveal">
+        <span class="sec-num">VII</span>
+        <h2>Languages &amp; References</h2>
+        <p class="sec-kicker">Tongues &amp; testimony</p>
+        <svg class="orn" aria-hidden="true"><use href="#orn"/></svg>
+      </header>
+
+      <div class="lang-wrap">
+        <div class="panel lang-card reveal">
+          <h3 class="col-title">Mother tongues</h3>
+          <div class="native">
+            <span>Punjabi</span>
+            <span>Urdu</span>
+          </div>
+        </div>
+        <div class="panel lang-card reveal" style="--d:.1s">
+          <h3 class="col-title">English <small>CEFR</small></h3>
+          <ul class="cefr">
+            <li><span>Listening</span><i style="--v:100%"></i><b>C2</b></li>
+            <li><span>Reading</span><i style="--v:100%"></i><b>C2</b></li>
+            <li><span>Spoken production</span><i style="--v:83%"></i><b>C1</b></li>
+            <li><span>Spoken interaction</span><i style="--v:83%"></i><b>C1</b></li>
+            <li><span>Writing</span><i style="--v:83%"></i><b>C1</b></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="refs">
+        <article class="panel ref reveal">
+          <h4>Dr Tayyab Ikram Shah</h4>
+          <p>University of Saskatchewan, Canada</p>
+        </article>
+        <article class="panel ref reveal" style="--d:.08s">
+          <h4>Dr Mujtaba Hassan</h4>
+          <p>Head of Department, Space Science — Institute of Space Technology</p>
+        </article>
+        <article class="panel ref reveal" style="--d:.16s">
+          <h4>Dr Sajid Ghuffar</h4>
+          <p>Associate Professor — Institute of Space Technology</p>
+        </article>
+        <article class="panel ref reveal" style="--d:.24s">
+          <h4>Dr Muhammad Shakir</h4>
+          <p>Institute of Space Technology</p>
+        </article>
+      </div>
+      <p class="refs-note reveal">Reference contact details available on request.</p>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section contact" id="contact">
+      <header class="sec-head reveal">
+        <span class="sec-num">VIII</span>
+        <h2>Contact</h2>
+        <p class="sec-kicker">Send word through the dark</p>
+        <svg class="orn" aria-hidden="true"><use href="#orn"/></svg>
+      </header>
+
+      <div class="contact-grid">
+        <div class="panel contact-card reveal">
+          <svg class="ico ico-lg" aria-hidden="true"><use href="#i-mail"/></svg>
+          <span class="c-label">Email</span>
+          <a class="c-value" href="mailto:aseerulhaq178@gmail.com">aseerulhaq178@gmail.com</a>
+          <button class="copy" type="button" data-copy="aseerulhaq178@gmail.com">
+            <svg class="ico" aria-hidden="true"><use href="#i-copy"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+        </div>
+        <div class="panel contact-card reveal" style="--d:.1s">
+          <svg class="ico ico-lg" aria-hidden="true"><use href="#i-phone"/></svg>
+          <span class="c-label">Phone</span>
+          <a class="c-value" href="tel:+923035645357">+92 303 5645357</a>
+        </div>
+        <div class="panel contact-card reveal" style="--d:.2s">
+          <svg class="ico ico-lg" aria-hidden="true"><use href="#i-pin"/></svg>
+          <span class="c-label">Based in</span>
+          <span class="c-value">Islamabad, Pakistan</span>
+        </div>
+      </div>
+
+      <div class="contact-cta reveal">
+        <a class="btn btn-solid" href="Aseer%20Ul%20Haq%20CV.pdf" download>
+          <svg class="ico" aria-hidden="true"><use href="#i-down"/></svg> Download full CV
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <svg class="orn" aria-hidden="true"><use href="#orn"/></svg>
+    <p class="footer-name">Aseer Ul Haq</p>
+    <p class="footer-line">Forged in darkness · Islamabad, Pakistan</p>
+    <p class="footer-small">© <span id="year">2026</span> Aseer Ul Haq · Background artwork: Agalloch</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
